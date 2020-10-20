@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+  
+    <form method ="post" action="/">
+   <button type="submit" name="Manual Input" value="Manual Input"><a href="/manual" id="c">Manual Input</a> </button><br><br>
+   <p>or</p>
+   <form action = "/success" method = "post" enctype="multipart/form-data">  
+        <input type="file" name="file" />  
+        <input type = "submit" value="Upload">  
+    </form>  
+</form> 
+  </div>
+{% endblock content %}

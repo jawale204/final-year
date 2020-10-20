@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class='center-screen'>
+  	<img src="/static/images/d.png">
+  	{% if name %}
+  	 <p>result for file name {{name}}</p>
+	{% endif %}
+	{% if val %}
+  	 <h1>{{val}}</h1>
+  	{% endif %}
+  	
+  </div>
+{% endblock content %}

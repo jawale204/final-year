@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Enter Parameters</legend>
+                <div class="form-group">
+                    {{ form.Id.label(class="form-control-label") }}
+
+                    {% if form.Id.errors %}
+                        {{ form.Id(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Id.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Id(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.hour.label(class="form-control-label") }}
+
+                    {% if form.hour.errors %}
+                        {{ form.hour(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.hour.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.hour(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                       <div class="form-group">
+                    {{ form.site_id.label(class="form-control-label") }}
+
+                    {% if form.site_id.errors %}
+                        {{ form.site_id(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.site_id.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.site_id(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                       <div class="form-group">
+                    {{ form.app_id.label(class="form-control-label") }}
+
+                    {% if form.app_id.errors %}
+                        {{ form.app_id(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.app_id.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.app_id(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                       <div class="form-group">
+                    {{ form.app_domain.label(class="form-control-label") }}
+
+                    {% if form.app_domain.errors %}
+                        {{ form.app_domain(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.app_domain.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.app_domain(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                       <div class="form-group">
+                    {{ form.site_domain.label(class="form-control-label") }}
+
+                    {% if form.site_domain.errors %}
+                        {{ form.site_domain(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.site_domain.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.site_domain(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                       <div class="form-group">
+                    {{ form.site_category.label(class="form-control-label") }}
+
+                    {% if form.site_category.errors %}
+                        {{ form.site_category(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.site_category.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.site_category(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                       <div class="form-group">
+                    {{ form.device_id.label(class="form-control-label") }}
+
+                    {% if form.device_id.errors %}
+                        {{ form.device_id(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.device_id.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.device_id(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                       <div class="form-group">
+                    {{ form.device_ip.label(class="form-control-label") }}
+
+                    {% if form.device_id.errors %}
+                        {{ form.device_id(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.device_id.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.device_id(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                       <div class="form-group">
+                    {{ form.device_type.label(class="form-control-label") }}
+
+                    {% if form.device_type.errors %}
+                        {{ form.device_type(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.device_type.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.device_type(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                       <div class="form-group">
+                    {{ form.device_model.label(class="form-control-label") }}
+
+                    {% if form.device_model.errors %}
+                        {{ form.device_model(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.device_model.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.device_model(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                <a href="check.html">{{ form.submit(class="btn btn-outline-info") }}</a>
+                </div>
+            </fieldset>
+           
+        </form>
+    </div>
+{% endblock content %}
